@@ -1,11 +1,20 @@
+import styled from 'styled-components'
+import Thumbnail from './Thumbnail'
+
 const Results = ({movies}) => {
     return (
-        <div>
+        <MoviesGrid>
             {
-                movies.map(movie => <Thumbnail key={movie.id} {...movie} /> )
+                movies.map(movie => <Thumbnail key={movie.id} movie={movie} /> )
             }   
-        </div>
+        </MoviesGrid>
     )
 }
 
 export default Results
+
+const MoviesGrid = styled.div`
+    display: grid;
+    gap: 20px;
+`
+
