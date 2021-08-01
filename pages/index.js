@@ -40,7 +40,7 @@ export default function Home({movies}) {
 
 const MoviesApp = styled.main`
   width: 95vw;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 30px 10px;
 `
