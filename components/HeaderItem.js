@@ -16,7 +16,6 @@ const HeaderItemOne = styled.div`
     flex-direction: column;
     align-items: center;
     width: 50px;
-    color: #ddd;
     cursor: pointer;
 
     > p {
@@ -25,6 +24,7 @@ const HeaderItemOne = styled.div`
         font-size: 13px;
         opacity: 0;
         margin-top: 10px;
+        transition: 300ms;
     }
 
     &:hover {

@@ -9,7 +9,7 @@ const Header = () => {
         <HeaderContainer>
 
             <HeaderLeft>
-                <h2>moviesNow</h2>
+                <h2>moviesNow.se</h2>
                 {/* <Image src='/netflix_official_logo_icon.svg' height={50} width={100} /> */}
             </HeaderLeft>
             <HeaderRight>
@@ -55,7 +55,7 @@ const HeaderLeft = styled.div`
     font-family: 'Kanit', sans-serif;
     letter-spacing: 0.2px;
     border-bottom: 1px solid brown;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     > h2 {
         font-size: 27px;
@@ -68,5 +68,6 @@ const HeaderLeft = styled.div`
 
     @media screen and (min-width: 700px) {
         align-self: flex-start;
+        border-bottom: none;
     }
 `
