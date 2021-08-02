@@ -1,16 +1,38 @@
 import styled from 'styled-components'
 import moviesRoot from '../utils/request'
 import { useRouter } from 'next/router'
+import { useState } from 'react'
 
 const Nav = () => {
 
     const router = useRouter()
 
+    const [currentId, setCurrentId] = useState(0)
+
+    const setActiveGenre = (id) => {
+        id && setCurrentId(id)
+    }
+
     return (
         <Navbar>
             <div>
                 {
-                    Object.entries(moviesRoot).map(([key, {title, URL}]) => <h2 key={key} onClick={() => router.push(`/?genre=${key}`) }>{title}</h2> )
+                    Object.entries(moviesRoot).map(([key, {title, URL}], idx) => {
+
+                        let active = {}
+                        if(idx === currentId){
+                            active = {
+                                color: "rgb(232, 51, 42)",
+                                fontSize: "16px",
+                                fontWeight: 700,
+                                borderBottom: "2px solid rgb(232, 51, 42)"
+                            }
+                        }
+
+                        return (
+                            <h2 key={key} style={active} onClick={() => {setActiveGenre(idx);router.push(`/?genre=${key}`)}}>{title}</h2>
+                        )
+                    })
                 }
             </div>
             <Fade></Fade>
