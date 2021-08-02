@@ -16,6 +16,11 @@ const Thumbnail = ({movie}) => {
                     <div>
                         <p>Ratings: {movie.vote_average}</p>
                         <p>Votes: {movie.vote_count}</p>
+                       
+                    </div>
+
+                    <div>
+                        <p>Release Date: {movie.release_date || movie.first_air_date}</p>
                         <p>Quality 1080p WEBRip (High)</p>
                     </div>
                     <p>{movie.overview.length <= 250 ? movie.overview : movie.overview.substring(0, 250)}...</p>
@@ -29,6 +34,11 @@ const Thumbnail = ({movie}) => {
 export default Thumbnail
 
 const ThumbnailContainer = styled.div`
+    transition: 300ms;
+
+    &:hover {
+        transform: scale(1.05);    
+    }
 
     > h3 {
         font-size: 13px;
@@ -47,6 +57,7 @@ const MovieBox = styled.div`
     cursor: pointer;
 
     &:hover {
+        /* transform: scale(1.1); */
         > div {
             opacity: 100;
         }
@@ -60,6 +71,7 @@ const MovieDetails = styled.div`
     top: 0;
     left: 0;
     font-size: 11px;
+    font-weight: 400;
     text-align: center;
     opacity: 0;
     transition: 300ms;

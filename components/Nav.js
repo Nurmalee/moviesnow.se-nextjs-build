@@ -82,5 +82,5 @@ const Fade = styled.div`
     top: 0;
     right: 0;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.0), #222);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.0), #333);
 `

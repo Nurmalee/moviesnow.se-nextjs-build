@@ -10,7 +10,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-family: 'Poppins', sans-serif;
   /* background-color: rgb(12, 40, 48); */
-  background-color: #222;
+  /* background-color: #222; */
+  background: linear-gradient(to bottom, #333, #222, teal);
   color: #ddd;
 }
 

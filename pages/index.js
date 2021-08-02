@@ -8,12 +8,12 @@ import Results from '../components/Results'
 export const getServerSideProps = async (context) => {
   const genre = context.query.genre
   
-  const res = await fetch(`https://api.themoviedb.org/3/${moviesRoot[genre]?.url || moviesRoot.fetchTrending.url}`)
+  const res = await fetch(`https://api.themoviedb.org/3${moviesRoot[genre]?.url || moviesRoot.fetchTrending.url}`)
   const data = await res.json()
 
   return {
     props: {
-      movies: data.results
+      movies: data?.results
     }
   }
 }
